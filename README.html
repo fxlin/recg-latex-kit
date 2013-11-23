@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>The latex format files for recg authors</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="README.tex"> 
+<meta name="date" content="2013-11-23 00:33:00"> 
+<link rel="stylesheet" type="text/css" href="README.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">The latex format files for recg authors</h2>
+<div class="author" ><span 
+class="ptmr7t-x-x-120">Felix Xiaozhu Lin</span></div><br />
+<div class="date" ><span 
+class="ptmr7t-x-x-120">November 23, 2013</span></div>
+   </div>
+   <h3 class="sectionHead"><span class="titlemark">1    </span> <a 
+ id="x1-10001"></a>Summary</h3>
+<!--l. 30--><p class="noindent" >For generating a recg-style section of references, e.g.,&#x00A0;<span class="cite">[<a 
+href="#Xlin2012asplos">1</a>]</span>, instead of this&#x00A0;<span class="cite">[<a 
+href="#Xlin2012asplos-raw">2</a>]</span>. Also
+suppress series, addresses, and notes.
+<!--l. 33--><p class="indent" >   To get the code, do
+   <!--l. 35-->
+<div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1001r1"></a></span><span 
+class="pcrr7t-">git</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">clone</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">https</span><span 
+class="pcrr7t-">://</span><span 
+class="pcrr7t-">linxz02@code</span><span 
+class="pcrr7t-">.</span><span 
+class="pcrr7t-">google</span><span 
+class="pcrr7t-">.</span><span 
+class="pcrr7t-">com</span><span 
+class="pcrr7t-">/</span><span 
+class="pcrr7t-">p</span><span 
+class="pcrr7t-">/</span><span 
+class="pcrr7t-">recg</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">latex</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">kit</span><span 
+class="pcrr7t-">/</span>
+   </div>
+<!--l. 39--><p class="indent" >   Please contribute to the code.
+<!--l. 41--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2    </span> <a 
+ id="x1-20002"></a>Why needed?</h3>
+<!--l. 42--><p class="noindent" >RECG style expects this reference&#x00A0;<span class="cite">[<a 
+href="#Xlin2012asplos">1</a>]</span> out of the following raw bib entry downloaded
+from the ACM:
+   <!--l. 44-->
+<div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x1-2001r1"></a></span><span 
+class="pcrr7t-">@inproceedings</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">lin2012asplos</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">raw</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2002r2"></a></span><span 
+class="pcrr7t-">author</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">Lin</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Felix</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Xiaozhu</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Wang</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Zhen</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">LiKamWa</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Robert</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Zhong</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Lin</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2003r3"></a></span><span 
+class="pcrr7t-">title</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">Reflex</span><span 
+class="pcrr7t-">:</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">using</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">low</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">power</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">processors</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">in</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">smartphones</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">without</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">knowing</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">them</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2004r4"></a></span><span 
+class="pcrr7t-">booktitle</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">Proceedings</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">of</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">the</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">eighteenth</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">international</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">conference</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">on</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Architectural</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">support</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">for</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">programming</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">languages</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">operating</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">systems</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2005r5"></a></span><span 
+class="pcrr7t-">year</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{2012},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2006r6"></a></span><span 
+class="pcrr7t-">isbn</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{978-1-4503-0759-8},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2007r7"></a></span><span 
+class="pcrr7t-">location</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">London</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">England</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">UK</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2008r8"></a></span><span 
+class="pcrr7t-">pages</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{13--24},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2009r9"></a></span><span 
+class="pcrr7t-">numpages</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{12},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2010r10"></a></span><span 
+class="pcrr7t-">url</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">http</span><span 
+class="pcrr7t-">://</span><span 
+class="pcrr7t-">doi</span><span 
+class="pcrr7t-">.</span><span 
+class="pcrr7t-">acm</span><span 
+class="pcrr7t-">.</span><span 
+class="pcrr7t-">org</span><span 
+class="pcrr7t-">/10.1145/2150976.2150979},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2011r11"></a></span><span 
+class="pcrr7t-">doi</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{10.1145/2150976.2150979},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2012r12"></a></span><span 
+class="pcrr7t-">acmid</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{2150979},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2013r13"></a></span><span 
+class="pcrr7t-">publisher</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">ACM</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2014r14"></a></span><span 
+class="pcrr7t-">address</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">New</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">York</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">NY</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">USA</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2015r15"></a></span><span 
+class="pcrr7t-">keywords</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">distributed</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">shared</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">memory</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">energy</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">efficiency</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">heterogeneous</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">systems</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">mobile</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">systems</span><span 
+class="pcrr7t-">},</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-2016r16"></a></span><span 
+class="pcrr7t-">}</span>
+   </div>
+
+<!--l. 63--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3    </span> <a 
+ id="x1-30003"></a>Usage</h3>
+<!--l. 65--><p class="noindent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-3002x1">In your-bib.bib, replace the raw booktitle with the abbrevivation, e.g.
+     <!--l. 69--><p class="noindent" >change
+     <!--l. 71-->
+     <div class="lstlisting" id="listing-3"><span class="label"><a 
+ id="x1-3003r1"></a></span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">booktitle</span><span 
+class="pcrr7t-">={</span><span 
+class="pcrr7t-">Proceedings</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">of</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">the</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">eighteenth</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">international</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">conference</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">on</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Architectural</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">support</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">for</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">programming</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">languages</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">operating</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">systems</span><span 
+class="pcrr7t-">}</span>
+     </div>
+     <!--l. 75--><p class="noindent" >to
+     <!--l. 77-->
+     <div class="lstlisting" id="listing-4"><span class="label"><a 
+ id="x1-3004r1"></a></span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">booktitle</span><span 
+class="pcrr7t-">=</span><span 
+class="pcrr7t-">ASPLOS</span>
+     </div>
+     <!--l. 81--><p class="noindent" >For available abbrevivations, see abr.bib.
+     </li>
+     <li 
+  class="enumerate" id="x1-3006x2">In your paper, do
+     <!--l. 86-->
+     <div class="lstlisting" id="listing-5"><span class="label"><a 
+ id="x1-3007r1"></a></span><span 
+class="pcrr7t-">\</span><span 
+class="pcrr7t-">bibliographystyle</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">abbrv</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">recg</span><span 
+class="pcrr7t-">}</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-3008r2"></a></span><span 
+class="pcrr7t-">\</span><span 
+class="pcrr7t-">bibliography</span><span 
+class="pcrr7t-">{./</span><span 
+class="pcrr7t-">abr</span><span 
+class="pcrr7t-">,./</span><span 
+class="pcrr7t-">your</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">bib</span><span 
+class="pcrr7t-">}</span>
+     </div>
+     </li></ol>
+<!--l. 96--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">4    </span> <a 
+ id="x1-40004"></a>Known Issues</h3>
+
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t-x-x-109">abbrv-recg.bst </span>only deals with inproceedings and article.
+     </li>
+     <li class="itemize"><span 
+class="pcrr7t-x-x-109">plain-recg.bst </span>seems necessary.
+     </li>
+     <li class="itemize">Didn&#8217;t know who created the initial version of abr.bib. Should give credit to
+     this person.</li></ul>
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-50004"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xlin2012asplos"></a>F.&#x00A0;X.   Lin,   Z.&#x00A0;Wang,   R.&#x00A0;LiKamWa,   and   L.&#x00A0;Zhong.      Reflex:   using
+   low-power processors in smartphones without knowing them.  In <span 
+class="ptmri7t-x-x-109">Proc. ACM</span>
+   <span 
+class="ptmri7t-x-x-109">Int.  Conf.  Architectural  Support  for  Programming  Languages  &amp;  Operating</span>
+   <span 
+class="ptmri7t-x-x-109">Systems (ASPLOS)</span>, pages 13&#8211;24, 2012.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xlin2012asplos-raw"></a>F.&#x00A0;X.   Lin,   Z.&#x00A0;Wang,   R.&#x00A0;LiKamWa,   and   L.&#x00A0;Zhong.      Reflex:   using
+   low-power processors in smartphones without knowing them.  In <span 
+class="ptmri7t-x-x-109">Proceedings</span>
+   <span 
+class="ptmri7t-x-x-109">of  the  eighteenth  international  conference  on  Architectural  support  for</span>
+   <span 
+class="ptmri7t-x-x-109">programming languages and operating systems</span>, pages 13&#8211;24, 2012.
+</p>
+   </div>
+    
+</body></html> 
+
+
+
