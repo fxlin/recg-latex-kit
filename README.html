@@ -7,7 +7,7 @@
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <!-- html --> 
 <meta name="src" content="README.tex"> 
-<meta name="date" content="2013-11-23 09:08:00"> 
+<meta name="date" content="2013-11-23 10:19:00"> 
 <link rel="stylesheet" type="text/css" href="README.css"> 
 </head><body 
 >
@@ -27,9 +27,8 @@ class="ptmr7t-x-x-120">November 23, 2013</span></div>
 <!--l. 30--><p class="noindent" >For generating a recg-style section of references, e.g.,&#x00A0;<span class="cite">[<a 
 href="#Xlin2012asplos">1</a>]</span>, instead of this&#x00A0;<span class="cite">[<a 
 href="#Xlin2012asplos-raw">2</a>]</span>. Also
-suppress series, addresses, and notes.
-<!--l. 33--><p class="indent" >   To get the code, do
-   <!--l. 35-->
+suppress all misc fields except year and pages.
+<!--l. 33--><p class="indent" >   To get the code, do <!--l. 34-->
 <div class="lstlisting" id="listing-1"><span class="label"><a 
  id="x1-1001r1"></a></span><span 
 class="pcrr7t-">git</span><span 
@@ -53,14 +52,14 @@ class="pcrr7t-">-</span><span
 class="pcrr7t-">kit</span><span 
 class="pcrr7t-">/</span>
    </div>
-<!--l. 39--><p class="indent" >   Please contribute to the code.
-<!--l. 41--><p class="noindent" >
+<!--l. 38--><p class="indent" >   Please contribute to the code.
+<!--l. 40--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">2    </span> <a 
  id="x1-20002"></a>Why needed?</h3>
-<!--l. 42--><p class="noindent" >RECG style expects this reference&#x00A0;<span class="cite">[<a 
+<!--l. 41--><p class="noindent" >RECG style expects this reference&#x00A0;<span class="cite">[<a 
 href="#Xlin2012asplos">1</a>]</span> out of the following raw bib entry downloaded
 from the ACM:
-   <!--l. 44-->
+   <!--l. 43-->
 <div class="lstlisting" id="listing-2"><span class="label"><a 
  id="x1-2001r1"></a></span><span 
 class="pcrr7t-">@inproceedings</span><span 
@@ -300,15 +299,15 @@ class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a
 class="pcrr7t-">}</span>
    </div>
 
-<!--l. 63--><p class="noindent" >
+<!--l. 62--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">3    </span> <a 
  id="x1-30003"></a>Usage</h3>
-<!--l. 65--><p class="noindent" >
+<!--l. 64--><p class="noindent" >
      <ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-3002x1">In your-bib.bib, replace the raw booktitle with the abbrevivation, e.g.
-     <!--l. 69--><p class="noindent" >change
-     <!--l. 71-->
+  class="enumerate" id="x1-3002x1">In your-bib.bib, replace the raw booktitle with the acronym, e.g.
+     <!--l. 68--><p class="noindent" >change
+     <!--l. 70-->
      <div class="lstlisting" id="listing-3"><span class="label"><a 
  id="x1-3003r1"></a></span><span 
 class="pcrr7t-">&#x00A0;</span><span 
@@ -345,22 +344,64 @@ class="pcrr7t-">&#x00A0;</span><span
 class="pcrr7t-">systems</span><span 
 class="pcrr7t-">}</span>
      </div>
-     <!--l. 75--><p class="noindent" >to
-     <!--l. 77-->
+     <!--l. 74--><p class="noindent" >to
+     <!--l. 76-->
      <div class="lstlisting" id="listing-4"><span class="label"><a 
  id="x1-3004r1"></a></span><span 
 class="pcrr7t-">&#x00A0;</span><span 
 class="pcrr7t-">booktitle</span><span 
 class="pcrr7t-">=</span><span 
-class="pcrr7t-">ASPLOS</span>
+class="pcrr7t-">ASPLOS</span><span 
+class="pcrr7t-">,</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-3005r2"></a></span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">booktitle</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">full</span><span 
+class="pcrr7t-">={</span><span 
+class="pcrr7t-">Proceedings</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">of</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">the</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">eighteenth</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">international</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">conference</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">on</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">Architectural</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">support</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">for</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">programming</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">languages</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">and</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">operating</span><span 
+class="pcrr7t-">&#x00A0;</span><span 
+class="pcrr7t-">systems</span><span 
+class="pcrr7t-">}</span>
      </div>
-     <!--l. 81--><p class="noindent" >For available abbrevivations, see abr.bib.
+     <!--l. 81--><p class="noindent" >Note that we preserve the full name in the <span 
+class="pcrr7t-x-x-109">booktitle-full </span>filed in case the
+     full name is needed in the future, and bibtex will ignore the field when generating
+     the reference.
+     <!--l. 83--><p class="noindent" >For all available acronyms, see abr-long.bib.
      </li>
      <li 
-  class="enumerate" id="x1-3006x2">In your paper, do
-     <!--l. 86-->
+  class="enumerate" id="x1-3007x2">In your paper, to generate the full reference, do:
+     <!--l. 88-->
      <div class="lstlisting" id="listing-5"><span class="label"><a 
- id="x1-3007r1"></a></span><span 
+ id="x1-3008r1"></a></span><span 
 class="pcrr7t-">\</span><span 
 class="pcrr7t-">bibliographystyle</span><span 
 class="pcrr7t-">{</span><span 
@@ -369,23 +410,62 @@ class="pcrr7t-">-</span><span
 class="pcrr7t-">recg</span><span 
 class="pcrr7t-">}</span><span 
 class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
- id="x1-3008r2"></a></span><span 
+ id="x1-3009r2"></a></span><span 
 class="pcrr7t-">\</span><span 
 class="pcrr7t-">bibliography</span><span 
 class="pcrr7t-">{./</span><span 
 class="pcrr7t-">abr</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">long</span><span 
 class="pcrr7t-">,./</span><span 
 class="pcrr7t-">your</span><span 
 class="pcrr7t-">-</span><span 
 class="pcrr7t-">bib</span><span 
 class="pcrr7t-">}</span>
      </div>
+     <!--l. 93--><p class="noindent" >which generates, e.g., &#8220;in <span 
+class="ptmri7t-x-x-109">Proc. ACM Int. Conf. Architectural Support for</span>
+     <span 
+class="ptmri7t-x-x-109">Programming Languages &amp; Operating Systems (ASPLOS)</span>, pages 46&#8211;472.
+     2012&#8221;.
+     <!--l. 95--><p class="noindent" ><span 
+class="ptmb7t-x-x-109">Alternatively</span>, if you want to save some space (e.g., for submission), do:
+     <!--l. 96-->
+     <div class="lstlisting" id="listing-6"><span class="label"><a 
+ id="x1-3010r1"></a></span><span 
+class="pcrr7t-">\</span><span 
+class="pcrr7t-">bibliographystyle</span><span 
+class="pcrr7t-">{</span><span 
+class="pcrr7t-">abbrv</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">recg</span><span 
+class="pcrr7t-">}</span><span 
+class="pcrr7t-">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-3011r2"></a></span><span 
+class="pcrr7t-">\</span><span 
+class="pcrr7t-">bibliography</span><span 
+class="pcrr7t-">{./</span><span 
+class="pcrr7t-">abr</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">short</span><span 
+class="pcrr7t-">,./</span><span 
+class="pcrr7t-">your</span><span 
+class="pcrr7t-">-</span><span 
+class="pcrr7t-">bib</span><span 
+class="pcrr7t-">}</span>
+
+     </div>
+     <!--l. 101--><p class="noindent" >which generates, e.g., &#8220;in <span 
+class="ptmri7t-x-x-109">Proc. ASPLOS</span>, pages 46&#8211;472. 2012&#8221;.
      </li></ol>
-<!--l. 96--><p class="noindent" >
+<!--l. 108--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">4    </span> <a 
  id="x1-40004"></a>Known Issues</h3>
-
      <ul class="itemize1">
+     <li class="itemize"><span 
+class="pcrr7t-x-x-109">abr-short </span>still  outputs  pages  in  the  reference.  Probably  another  .bst
+     needed?
+     </li>
      <li class="itemize"><span 
 class="pcrr7t-x-x-109">abbrv-recg.bst </span>only deals with inproceedings and article.
      </li>
@@ -409,6 +489,7 @@ class="ptmri7t-x-x-109">Int.  Conf.  Architectural  Support  for  Programming  L
    <span 
 class="ptmri7t-x-x-109">Systems (ASPLOS)</span>, pages 13&#8211;24, 2012.
    </p>
+
    <p class="bibitem" ><span class="biblabel">
  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xlin2012asplos-raw"></a>F.&#x00A0;X.   Lin,   Z.&#x00A0;Wang,   R.&#x00A0;LiKamWa,   and   L.&#x00A0;Zhong.      Reflex:   using
