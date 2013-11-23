@@ -1,0 +1,109 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{listings}
+\usepackage{times}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\title{The latex format files for recg authors}
+\author{Felix Xiaozhu Lin}
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+For generating a recg-style section of references, e.g.,~\cite{lin2012asplos}, instead of this~\cite{lin2012asplos-raw}.
+Also suppress series, addresses, and notes. 
+
+\section{Why needed?}
+RECG style expects this reference~\cite{lin2012asplos} out of the following raw bib entry downloaded from the ACM:
+
+\begin{lstlisting}
+@inproceedings{lin2012asplos-raw,
+ author = {Lin, Felix Xiaozhu and Wang, Zhen and LiKamWa, Robert and Zhong, Lin},
+ title = {Reflex: using low-power processors in smartphones without knowing them},
+ booktitle = {Proceedings of the eighteenth international conference on Architectural support for programming languages and operating systems},
+ year = {2012},
+ isbn = {978-1-4503-0759-8},
+ location = {London, England, UK},
+ pages = {13--24},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2150976.2150979},
+ doi = {10.1145/2150976.2150979},
+ acmid = {2150979},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {distributed shared memory, energy-efficiency, heterogeneous systems, mobile systems},
+} 
+\end{lstlisting}
+
+\section{Usage}
+
+\begin{enumerate}
+\item 
+In your-bib.bib, replace the raw booktitle with the abbrevivation, e.g.
+
+change
+
+\begin{lstlisting}
+  booktitle={Proceedings of the eighteenth international conference on Architectural support for programming languages and operating systems}
+\end{lstlisting}  
+
+to 
+
+\begin{lstlisting}
+  booktitle=ASPLOS
+\end{lstlisting}  
+
+For available abbrevivations, see abr.bib.
+
+\item 
+In your paper, do 
+
+\begin{lstlisting}
+\bibliographystyle{abbrv-recg}
+\bibliography{./abr,./your-bib}
+\end{lstlisting}
+
+\end{enumerate}
+
+
+  
+
+\section{Known Issues}
+
+\begin{itemize}
+\item 
+	\texttt{abbrv-recg.bst} only deals with inproceedings and article. 
+\item 
+	\texttt{plain-recg.bst} seems necessary.
+\item 
+	Didn't know who created the initial version of abr.bib. Should give credit to this person. 
+\end{itemize}
+
+%\small		% xzl: for the arXiv version
+
+%\bibliographystyle{plain}
+%\bibliographystyle{abbrv}
+\bibliographystyle{abbrv-recg}
+
+%\bibliography{./abr,./browser,./browsersecurity,./xzl}
+\bibliography{./abr,./your-bib}
+
+\end{document}
+
