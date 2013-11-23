@@ -28,10 +28,9 @@
 \section{Summary}
 
 For generating a recg-style section of references, e.g.,~\cite{lin2012asplos}, instead of this~\cite{lin2012asplos-raw}.
-Also suppress series, addresses, and notes. 
+Also suppress all misc fields except year and pages.
 
 To get the code, do
-
 \begin{lstlisting}
 git clone https://linxz02@code.google.com/p/recg-latex-kit/
 \end{lstlisting}
@@ -64,7 +63,7 @@ RECG style expects this reference~\cite{lin2012asplos} out of the following raw 
 
 \begin{enumerate}
 \item 
-In your-bib.bib, replace the raw booktitle with the abbrevivation, e.g.
+In your-bib.bib, replace the raw booktitle with the acronym, e.g.
 
 change
 
@@ -75,18 +74,31 @@ change
 to 
 
 \begin{lstlisting}
-  booktitle=ASPLOS
+  booktitle=ASPLOS,
+  booktitle-full={Proceedings of the eighteenth international conference on Architectural support for programming languages and operating systems}  
 \end{lstlisting}  
 
-For available abbrevivations, see abr.bib.
+Note that we preserve the full name in the \texttt{booktitle-full} filed in case the full name is needed in the future, and bibtex will ignore the field when generating the reference.
+
+For all available acronyms, see abr-long.bib.
 
 \item 
-In your paper, do 
+In your paper, to generate the full reference, do:
 
 \begin{lstlisting}
 \bibliographystyle{abbrv-recg}
-\bibliography{./abr,./your-bib}
+\bibliography{./abr-long,./your-bib}
 \end{lstlisting}
+
+which generates, e.g., ``in \emph{Proc. ACM Int. Conf. Architectural Support for Programming Languages \& Operating Systems (ASPLOS)}, pages 46--472. 2012''.
+
+\textbf{Alternatively}, if you want to save some space (e.g., for submission), do:
+\begin{lstlisting}
+\bibliographystyle{abbrv-recg}
+\bibliography{./abr-short,./your-bib}
+\end{lstlisting}
+
+which generates, e.g., ``in \emph{Proc. ASPLOS}, pages 46--472. 2012''.
 
 \end{enumerate}
 
@@ -96,6 +108,8 @@ In your paper, do
 \section{Known Issues}
 
 \begin{itemize}
+\item 
+	\texttt{abr-short} still outputs pages in the reference. Probably another .bst needed?
 \item 
 	\texttt{abbrv-recg.bst} only deals with inproceedings and article. 
 \item 
@@ -111,7 +125,7 @@ In your paper, do
 \bibliographystyle{abbrv-recg}
 
 %\bibliography{./abr,./browser,./browsersecurity,./xzl}
-\bibliography{./abr,./your-bib}
+\bibliography{./abr-long,./your-bib}
 
 \end{document}
 

@@ -670,7 +670,7 @@ FUNCTION {inproceedings}
   new.block
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
+      %format.bvolume output
       %format.number.series output
       format.pages output
       address empty$
