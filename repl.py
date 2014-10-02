@@ -16,11 +16,13 @@ import re
 
 all_conf_list = [
 	["USENIX Annual Technical Conference", "ATC"],
+	["USENIX Conference on Annual Technical Conference", "ATC"],  # sometimes this might appear
 	["International Conference on Mobile Systems, Applications, and Services", "MOBISYS"],
 	["International Conference on Mobile Computing and Networking", "MOBICOM"],
 	["International Joint Conference on Pervasive and Ubiquitous Computing", "UBICOMP"],
 	["SIGPLAN Conference on Programming Language Design and Implementation", "PLDI"],
 	["Conference on Operating Systems Design and Implementation", "OSDI"],
+	["Symposium on Operating Systems Design and Implementation", "OSDI"], # old name?	
 	["ACM Symposium on Operating Systems Principles", "SOSP"],
 	["International Symposium on Computer Architecture", "ISCA"],
 	["Conference on Architectural Support for Programming Languages and Operating Systems", "ASPLOS"],
@@ -31,7 +33,7 @@ all_conf_list = [
 ]
 
 def repl_confname(conf_list, line):
-	match = False
+	ever_matched = False
 	#if line[0] == "#":	# comment line
 	if re.search("^\s*#.*", line):  # line begins with #
 		print line,
@@ -39,17 +41,18 @@ def repl_confname(conf_list, line):
 		
 	# try to match against all conf names
 	for fullname, shortname in conf_list:
-		ex1=r'''(.*)(booktitle)(.*''' + fullname + '''.*)'''
+		ex1=r'''(.*)(booktitle =)(.*''' + fullname + '''.*)'''
 		match = re.search(ex1, line)
 		if match:
-			if match == True:	# this line matches multiple patterns, why???
+			if ever_matched == True:	# this line matches multiple patterns, why???
 				sys.stderr.write("error: line: " + line)
 			else:
-				print match.group(1) + "booktitle-full" + match.group(3)
+				print match.group(1) + "booktitle-full =" + match.group(3)
 				print "%sbooktitle = %s," %(match.group(1), shortname)
-				match = True			
+				ever_matched = True			
 	# no match in any conf
-	print line,
+	if not ever_matched:
+		print line,
 
 if __name__ == "__main__":    
     f=file(sys.argv[1])
