@@ -3,6 +3,77 @@
 # Todo: build a tool to perserve the case of specific terms with {}, eg I/O
 #
 
+@inproceedings{mashupos,
+ author = {Wang, Helen J. and Fan, Xiaofeng and Howell, Jon and Jackson, Collin},
+ title = {Protection and Communication Abstractions for Web Browsers in MashupOS},
+ booktitle-full = {Proceedings of Twenty-first ACM SIGOPS Symposium on Operating Systems Principles},
+ booktitle = SOSP,
+ series = {SOSP '07},
+ year = {2007},
+ isbn = {978-1-59593-591-5},
+ location = {Stevenson, Washington, USA},
+ pages = {1--16},
+ numpages = {16},
+ url = {http://doi.acm.org/10.1145/1294261.1294263},
+ doi = {10.1145/1294261.1294263},
+ acmid = {1294263},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {abstractions, browser, communications, multi-principal OS, protection, same-origin policy, security, web},
+} 
+
+@inproceedings{ibos,
+ author = {Tang, Shuo and Mai, Haohui and King, Samuel T.},
+ title = {Trust and Protection in the Illinois Browser Operating System},
+ booktitle-full = {Proceedings of the 9th USENIX Conference on Operating Systems Design and Implementation},
+ booktitle = OSDI,
+ series = {OSDI'10},
+ year = {2010},
+ location = {Vancouver, BC, Canada},
+ pages = {1--8},
+ numpages = {8},
+ url = {http://dl.acm.org/citation.cfm?id=1924943.1924945},
+ acmid = {1924945},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+} 
+
+
+@inproceedings{ghosts,
+ author = {Anand, Manish and Nightingale, Edmund B. and Flinn, Jason},
+ title = {Ghosts in the Machine: Interfaces for Better Power Management},
+ booktitle-full = {Proceedings of the 2Nd International Conference on Mobile Systems, Applications, and Services},
+ booktitle = MOBISYS,
+ series = {MobiSys '04},
+ year = {2004},
+ isbn = {1-58113-793-1},
+ location = {Boston, MA, USA},
+ pages = {23--35},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/990064.990070},
+ doi = {10.1145/990064.990070},
+ acmid = {990070},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {adaptive caching, energy-awareness, power management},
+} 
+
+@inproceedings{Li:2014:EOM:2591305.2591316,
+ author = {Li, Jing and Badam, Anirudh and Chandra, Ranveer and Swanson, Steven and Worthington, Bruce and Zhang, Qi},
+ title = {On the Energy Overhead of Mobile Storage Systems},
+ booktitle = {Proceedings of the 12th USENIX Conference on File and Storage Technologies},
+ series = {FAST'14},
+ year = {2014},
+ isbn = {978-1-931971-08-9},
+ location = {Santa Clara, CA},
+ pages = {105--118},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=2591305.2591316},
+ acmid = {2591316},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+} 
+
 @inproceedings{isca13malware,
  author = {Demme, John and Maycock, Matthew and Schmitz, Jared and Tang, Adrian and Waksman, Adam and Sethumadhavan, Simha and Stolfo, Salvatore},
  title = {On the Feasibility of Online Malware Detection with Performance Counters},
@@ -311,7 +382,8 @@ publisher = {USENIX Association},
 @inproceedings{zap,
  author = {Osman, Steven and Subhraveti, Dinesh and Su, Gong and Nieh, Jason},
  title = {The Design and Implementation of Zap: A System for Migrating Computing Environments},
- booktitle = {Proceedings of the 5th Symposium on Operating Systems Design and implementation},
+ booktitle-full = {Proceedings of the 5th Symposium on Operating Systems Design and implementation},
+ booktitle = OSDI,
  series = {OSDI '02},
  year = {2002},
  isbn = {978-1-4503-0111-4},
@@ -1189,6 +1261,36 @@ ISSN={0733-8716},}
   year		= {2014}
 }
 
+@Misc{google-gpu-accel-chrome,
+  author	= {Tom  Tiltzius and Vangelis Kokkevis and the Chrome Grpahics Team},
+  title		= {GPU Accelerated Compositing in Chrome},
+  howpublished	= {Chromium design documentation},
+  year		= {2014}
+}
+
+
+@Misc{google-chrome-scheduling,
+  author	= {Google},
+  title		= {Chrome Scheduling},
+  howpublished	= {Google London Perf Summit},
+  year		= {2014}
+}
+
+@Misc{google-chrome-mobile-60fps,
+  author	= {Daniel Sievers and Nat Duca},
+  title		= {Chrome on Mobile @ 60fps},
+  howpublished	= {GPU Technology Conference},
+  year		= {2014}
+}
+
+@Misc{google-ubercompositor,
+  author	= {Chromium.org},
+  title		= {Ubercompositor - Chrome Rendering Model},
+  howpublished	= {},
+  year		= {2014}
+}
+
+
 @misc{samsung-gear-guide,
 	author = {Samsung}, 
 	title = {Samsun Gear Application Programming Guide},
@@ -1203,11 +1305,27 @@ ISSN={0733-8716},}
 	year = {2014}
 }
 
+@misc{google-future-sync,
+	author = {Chromium.org}, 
+	title = {Trustable Future Sync Points},
+	howpublished = {Chromium design documentation},
+	year = {2014}
+}
+
+### 	author = {Brian Anderson and John Bauman}, 
+
 @misc{chrome-speed-tracer,
 	author = {Google}, 
 	title = {Getting Started with Speed Tracer},
 	howpublished = {\url{https://developers.google.com/web-toolkit/speedtracer/get-started}},
 	year = {2012}
+}
+
+@misc{google-chromium,
+	author = {Google}, 
+	title = {The Chromium Projects},
+	howpublished = {\url{http://www.chromium.org/}},
+	year = {2014}
 }
 
 @misc{android-gfx-arch,
@@ -1255,7 +1373,7 @@ ISSN={0733-8716},}
 
 @Misc{		  moto360review,
   author	= {Motorola},
-  title		= {{Moto 360 review—Beautiful outside, ugly inside}},
+  title		= {{Moto 360 review -- Beautiful outside, ugly inside}},
   howpublished	= {\url{http://arstechnica.com/gadgets/2014/09/moto-360-review-beautiful-outside-ugly-inside/2/}},
   year		= {2014}
 }

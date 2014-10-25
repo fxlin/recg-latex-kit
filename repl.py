@@ -24,6 +24,7 @@ all_conf_list = [
 	["Conference on Operating Systems Design and Implementation", "OSDI"],
 	["Symposium on Operating Systems Design and Implementation", "OSDI"], # old name?	
 	["ACM Symposium on Operating Systems Principles", "SOSP"],
+	["ACM SIGOPS Symposium on Operating Systems Principles", "SOSP"],	# also this...
 	["International Symposium on Computer Architecture", "ISCA"],
 	["Conference on Architectural Support for Programming Languages and Operating Systems", "ASPLOS"],
 	["Conference on Networked Systems Design and Implementation", "NSDI"],
@@ -42,7 +43,7 @@ def repl_confname(conf_list, line):
 	# try to match against all conf names
 	for fullname, shortname in conf_list:
 		ex1=r'''(.*)(booktitle =)(.*''' + fullname + '''.*)'''
-		match = re.search(ex1, line)
+		match = re.search(ex1, line, re.IGNORECASE)
 		if match:
 			if ever_matched == True:	# this line matches multiple patterns, why???
 				sys.stderr.write("error: line: " + line)
