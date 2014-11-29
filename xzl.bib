@@ -3,6 +3,86 @@
 # Todo: build a tool to perserve the case of specific terms with {}, eg I/O
 #
 
+@inproceedings{expressos,
+ author = {Mai, Haohui and Pek, Edgar and Xue, Hui and King, Samuel Talmadge and Madhusudan, Parthasarathy},
+ title = {Verifying Security Invariants in ExpressOS},
+ booktitle = {Proceedings of the Eighteenth International Conference on Architectural Support for Programming Languages and Operating Systems},
+ series = {ASPLOS '13},
+ year = {2013},
+ isbn = {978-1-4503-1870-9},
+ location = {Houston, Texas, USA},
+ pages = {293--304},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2451116.2451148},
+ doi = {10.1145/2451116.2451148},
+ acmid = {2451148},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {automatic theorem proving, microkernel, mobile security, programming by con- tracts},
+} 
+
+@inproceedings{secvisor,
+ author = {Seshadri, Arvind and Luk, Mark and Qu, Ning and Perrig, Adrian},
+ title = {SecVisor: A Tiny Hypervisor to Provide Lifetime Kernel Code Integrity for Commodity OSes},
+ booktitle = {Proceedings of Twenty-first ACM SIGOPS Symposium on Operating Systems Principles},
+ series = {SOSP '07},
+ year = {2007},
+ isbn = {978-1-59593-591-5},
+ location = {Stevenson, Washington, USA},
+ pages = {335--350},
+ numpages = {16},
+ url = {http://doi.acm.org/10.1145/1294261.1294294},
+ doi = {10.1145/1294261.1294294},
+ acmid = {1294294},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {code attestation, code injection attacks, code integrity, hypervisor, memory virtualization, preventing},
+} 
+
+@inproceedings{inktag,
+ author = {Hofmann, Owen S. and Kim, Sangman and Dunn, Alan M. and Lee, Michael Z. and Witchel, Emmett},
+ title = {InkTag: Secure Applications on an Untrusted Operating System},
+ booktitle = {Proceedings of the Eighteenth International Conference on Architectural Support for Programming Languages and Operating Systems},
+ series = {ASPLOS '13},
+ year = {2013},
+ isbn = {978-1-4503-1870-9},
+ location = {Houston, Texas, USA},
+ pages = {265--278},
+ numpages = {14},
+ url = {http://doi.acm.org/10.1145/2451116.2451146},
+ doi = {10.1145/2451116.2451146},
+ acmid = {2451146},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {application protection, paraverification, virtualization-based security},
+} 
+
+@INPROCEEDINGS{trustvisor, 
+author={McCune, J.M. and Yanlin Li and Ning Qu and Zongwei Zhou and Datta, A. and Gligor, V. and Perrig, A.}, 
+booktitle={Security and Privacy (SP), 2010 IEEE Symposium on}, 
+title={TrustVisor: Efficient TCB Reduction and Attestation}, 
+year={2010}, 
+month={May}, 
+pages={143-158}, 
+keywords={Algorithm design and analysis;Arm;Circuit testing;Computer security;Costs;Hardware;Logic;Privacy;Process design;Runtime;Attestation;Integrity Measurement;Minimal TCB;TPM;Trusted Computing;Virtualization}, 
+doi={10.1109/SP.2010.17}, 
+ISSN={1081-6011},}
+
+@inproceedings{gpu-steal,
+  title={Stealing Webpages Rendered on Your Browser by Exploiting GPU Vulnerabilities},
+  author={Lee, Sangho and Kim, Youngsok and Kim, Jangwoo and Kim, Jong},
+  booktitle={IEEE Symposium on Security and Privacy},
+  year={2014},
+}
+
+@inproceedings{gpu-keylogger,
+  title={You can type, but you can’t hide: A stealthy GPU-based keylogger},
+  author={Ladakis, Evangelos and Koromilas, Lazaros and Vasiliadis, Giorgos and Polychronakis, Michalis and Ioannidis, Sotiris},
+  booktitle={Proceedings of the 6th European Workshop on System Security (EuroSec)},
+  year={2013}
+}
+
+
 @inproceedings{mashupos,
  author = {Wang, Helen J. and Fan, Xiaofeng and Howell, Jon and Jackson, Collin},
  title = {Protection and Communication Abstractions for Web Browsers in MashupOS},
@@ -1182,12 +1262,14 @@ ISSN={0733-8716},}
   year = 2012		 
 }
 
-###Misc{	  exynos4120rtm,
+@Misc{		  exynos5250rtm,
   author	= {Samsung},
-  title		= {Exynos 4210 Application Processor},
-  howpublished	= {\url{http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=844&partnum=Exynos%204210}}
-		  
+  title		= {Exynos 5250 Application Processor},
+  howpublished	= {\url{http://www.samsung.com/global/business/semiconductor/product/application/detail?productId=7668}}, 
+  year = 2012		 
 }
+
+
 
 @Article{	  fos,
   author	= {Wentzlaff, David and Agarwal, Anant},
@@ -1335,6 +1417,13 @@ ISSN={0733-8716},}
 	year = {2014}
 }
 
+@misc{arm-fastmodel,
+	author = {ARM}, 
+	title = {{ARM -- Fast Models}},
+	howpublished = {\url{http://www.arm.com/products/tools/models/fast-models/index.php}},
+	year = {2014}
+}
+
 @Misc{		  mediatek-aster,
   author	= {MediaTek},
   title		= {the MediaTek Aster MT2502 SoC},
@@ -1378,6 +1467,12 @@ ISSN={0733-8716},}
   year		= {2014}
 }
 
+@misc{gpu-iommu-vunlerbility,
+	author = {Qualcomm Innovation Center}, 
+	title = {{CVE-2014-0972}: Unprivileged GPU command streams can change the IOMMU page table},
+	year = {2014}
+}
+#### 	howpublished = {\url{https://www.codeaurora.org/projects/security-advisories/unprivileged-gpu-command-streams-can-change-the-iommu-page-table-cve-2014-0972}},
 
 @InProceedings{	  han2005dynamic,
   title		= {A dynamic operating system for sensor nodes},
